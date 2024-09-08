@@ -1,6 +1,17 @@
  CREATE TABLE student(
      student_id INT,
      name VARCHAR(20) NOT NULL,
-     major VARCHAR(20),
+     major VARCHAR(20) UNIQUE,
      PRIMARY KEY(student_id)
      );
+
+ INSERT INTO student VALUES(1,'Jake','Biology');
+
+INSERT INTO student VALUES(2,'Kate','Sociology');
+
+ INSERT INTO student VALUES(3,NULL,'Chemistry');//error
+
+ INSERT INTO student VALUES(4,'Jake','Biology');//error
+
+DROP TABLE student ;
+
