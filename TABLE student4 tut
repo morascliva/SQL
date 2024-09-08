@@ -1,0 +1,15 @@
+ CREATE TABLE student(
+    ->     student_id INT AUTO_INCREMENT,
+    ->     name VARCHAR(2),
+    ->     major VARCHAR(20),
+    ->     PRIMARY KEY (student_id)
+    -> );
+
+ INSERT INTO student(name,major) VALUES ('Ja','Biology');
+
+ INSERT INTO student(name,major) VALUES ('La','Chemistry');
+
+ SELECT* FROM student;
+
+
+DROP TABLE student;
