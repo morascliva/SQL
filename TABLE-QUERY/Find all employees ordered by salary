@@ -1,0 +1,4 @@
+
+SELECT *
+from employee
+ORDER BY salary ASC/DESC;
