@@ -1,0 +1,3 @@
+
+SELECT DISCINCT sex
+FROM employee;
