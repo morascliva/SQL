@@ -1,0 +1,3 @@
+
+SELECT first_name AS forename, employee.last_name AS surname
+FROM employee;
