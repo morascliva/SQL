@@ -1,0 +1,4 @@
+
+SELECT COUNT(sex), sex
+FROM employee
+GROUP BY sex;
