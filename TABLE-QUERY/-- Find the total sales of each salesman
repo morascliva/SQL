@@ -1,0 +1,4 @@
+
+SELECT SUM(total_sales), emp_id
+FROM works_with
+GROUP BY emp_id;
