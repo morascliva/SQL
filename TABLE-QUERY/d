@@ -1,0 +1,7 @@
+DELETE FROM employee
+WHERE emp_id =102;
+
+SELECT * from branch;
+
+
+
