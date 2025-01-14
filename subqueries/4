@@ -1,0 +1,10 @@
+-- Selecting all columns from the 'orders' table
+SELECT *
+-- Specifying the table to retrieve data from ('orders')
+FROM orders
+-- Filtering the results based on the condition that 'purch_amt' is greater than the result of a subquery
+WHERE purch_amt >
+    -- Subquery: Selecting the average 'purch_amt' from the 'orders' table where 'ord_date' is '10/10/2012'
+    (SELECT AVG(purch_amt) 
+     FROM orders 
+     WHERE ord_date = '10/10/2012');
