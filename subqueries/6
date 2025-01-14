@@ -1,0 +1,10 @@
+-- Selecting the 'commission' column from the 'salesman' table
+SELECT commission
+-- Specifying the table to retrieve data from ('salesman')
+FROM salesman
+-- Filtering the results based on the condition that 'salesman_id' is in the result of a subquery
+WHERE salesman_id IN
+    -- Subquery: Selecting 'salesman_id' from the 'customer' table where 'city' is 'Paris'
+    (SELECT salesman_id 
+     FROM customer
+     WHERE city = 'Paris');
