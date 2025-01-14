@@ -1,0 +1,10 @@
+-- Selecting all columns from the 'customer' table
+SELECT *
+-- Specifying the table to retrieve data from ('customer')
+FROM customer
+-- Filtering the results based on the condition that 'customer_id' is equal to the result of a subquery
+WHERE customer_id =
+    -- Subquery: Selecting 'salesman_id - 2001' from the 'salesman' table where 'name' is 'Mc Lyon'
+    (SELECT salesman_id - 2001
+     FROM salesman
+     WHERE name = 'Mc Lyon');
