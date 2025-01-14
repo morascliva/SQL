@@ -1,0 +1,9 @@
+-- Selecting all columns from the 'orders' table (aliased as 'a')
+SELECT * 
+-- Specifying the table to retrieve data from ('orders' as 'a')
+FROM orders a
+-- Filtering the results based on the condition that 'purch_amt' is greater than or equal to the average 'purch_amt' for the same 'customer_id'
+WHERE purch_amt >=
+    -- Subquery: Calculating the average 'purch_amt' from the 'orders' table (aliased as 'b') for the same 'customer_id'
+    (SELECT AVG(purch_amt) FROM orders b 
+     WHERE b.customer_id = a.customer_id);
