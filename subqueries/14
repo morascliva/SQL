@@ -1,0 +1,11 @@
+SELECT ord_date, SUM(purch_amt)
+-- Specifying the table to retrieve data from ('orders' as 'a')
+FROM orders a
+-- Grouping the results by 'ord_date'
+GROUP BY ord_date
+-- Filtering the grouped results based on the condition that the sum of 'purch_amt' is greater than a calculated threshold
+HAVING SUM(purch_amt) >
+    -- Subquery: Calculating the threshold as 1000.00 plus the maximum 'purch_amt' for the same 'ord_date'
+    (SELECT 1000.00 + MAX(purch_amt) 
+     FROM orders b 
+     WHERE a.ord_date = b.ord_date);
