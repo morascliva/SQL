@@ -1,0 +1,10 @@
+-- Selecting all columns from the 'orders' table
+SELECT *
+-- Specifying the table to retrieve data from ('orders')
+FROM orders
+-- Filtering the results based on the condition that 'salesman_id' is in the result of a subquery
+WHERE salesman_id IN
+    -- Subquery: Selecting 'salesman_id' from the 'salesman' table where 'city' is 'New York'
+    (SELECT salesman_id 
+     FROM salesman 
+     WHERE city = 'New York');
