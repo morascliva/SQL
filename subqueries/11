@@ -1,0 +1,5 @@
+select salesman_id,name
+from Salesman a
+where 1 <( select count(*)
+           from customer 
+           where salesman_id= a.salesman);
