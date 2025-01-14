@@ -1,0 +1,14 @@
+
+
+-- Selecting the 'grade' column and the count of rows from the 'customer' table
+SELECT grade, COUNT(*)
+-- Specifying the table to retrieve data from ('customer')
+FROM customer
+-- Grouping the results by the 'grade' column
+GROUP BY grade
+-- Applying a filter to the grouped results, including only those with 'grade' greater than the average 'grade' for customers in 'New York'
+HAVING grade >
+    -- Subquery: Selecting the average 'grade' from the 'customer' table where 'city' is 'New York'
+    (SELECT AVG(grade)
+     FROM customer
+     WHERE city = 'New York');
