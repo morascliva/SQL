@@ -1,0 +1,9 @@
+SELECT customer_id, cust_name, city
+-- Specifying the table to retrieve data from ('customer')
+FROM customer
+-- Filtering the results based on the existence of records in a subquery
+WHERE EXISTS
+   -- Subquery: Selecting any record from the 'customer' table where 'city' is 'London'
+   (SELECT *
+    FROM customer 
+    WHERE city='London');
