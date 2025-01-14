@@ -1,0 +1,15 @@
+-- Selecting specific columns from the 'orders' table
+SELECT ord_no, purch_amt, ord_date, salesman_id 
+-- Specifying the table to retrieve data from ('orders')
+FROM orders 
+-- Filtering the results based on the condition that 'salesman_id' is in the result of a subquery
+WHERE salesman_id IN (
+    -- Subquery: Selecting 'salesman_id' from the 'salesman' table where 'commission' is equal to the maximum 'commission' in the 'salesman' table
+    SELECT salesman_id 
+    FROM salesman
+    WHERE commission = (
+        -- Subquery: Selecting the maximum 'commission' from the 'salesman' table
+        SELECT MAX(commission) 
+        FROM salesman
+    )
+);
