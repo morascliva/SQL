@@ -1,3 +1,4 @@
+
 SELECT customer_id, cust_name, city
 -- Specifying the table to retrieve data from ('customer')
 FROM customer
