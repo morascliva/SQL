@@ -1,3 +1,4 @@
+
 -- Selecting all columns from the 'orders' table (aliased as 'a')
 SELECT * 
 -- Specifying the table to retrieve data from ('orders' as 'a')
