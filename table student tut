@@ -1,4 +1,5 @@
- use company
+
+use company
 
  CREATE TABLE student(
     -> student_id INT,
