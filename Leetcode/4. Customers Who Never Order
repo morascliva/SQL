@@ -1,0 +1,14 @@
+Find customers who are in the Customers table, but not in the Orders table.
+
+SELECT c.name AS Customers
+FROM Customers AS c
+LEFT JOIN Orders AS o ON c.id = o.customerId
+WHERE o.id IS NULL;
+
+
+LEFT JOIN:
+Get all customers, and add their orders if they exist.
+If they don’t have an order, the order columns will be NULL.
+
+WHERE o.id IS NULL:
+This filters only the customers who don’t have orders.
