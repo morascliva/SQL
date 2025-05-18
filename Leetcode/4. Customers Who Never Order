@@ -1,3 +1,4 @@
+
 Find customers who are in the Customers table, but not in the Orders table.
 
 SELECT c.name AS Customers
