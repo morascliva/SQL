@@ -3,3 +3,6 @@ FROM Person AS P
 LEFT JOIN 
 Address AS A
 ON P.personId = A.personId
+
+
+If there is no match, the columns from the Address table will return NULL.
