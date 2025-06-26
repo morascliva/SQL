@@ -8,3 +8,8 @@ WHERE e1.salary > e2.salary;
 The manager ID of employee e1 matches the ID of another employee (e2)
 e1 represents the employee.
 e2 represents their manager.
+
+
+e1 is each employee
+e2 is the employee’s manager — why? because the employee’s managerId (in e1) points to the id (in e2)
+
