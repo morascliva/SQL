@@ -1,5 +1,4 @@
--- Write your PostgreSQL query statement below
-SELECT * 
+SELECT *
 FROM products
-WHERE description LIKE '%SN____-____' 
-   OR description LIKE '%SN____-____ %';
+WHERE description REGEXP '(^|[^A-Za-z0-9])SN[0-9]{4}-[0-9]{4}($|[^0-9])'
+ORDER BY product_id;
