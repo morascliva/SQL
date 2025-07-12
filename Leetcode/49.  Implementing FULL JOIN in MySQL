@@ -1,5 +1,3 @@
-
-
 SELECT T.employee_id
 FROM  
   (SELECT * FROM Employees LEFT JOIN Salaries USING(employee_id)
