@@ -1,5 +1,3 @@
-
-
 SELECT
     S.student_id
     ,S.student_name
