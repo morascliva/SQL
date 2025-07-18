@@ -1,3 +1,5 @@
+DELETE doesn't support deleting specific columns — it deletes entire rows, not specific fields.
+
 DELETE p1
 FROM Person p1
 JOIN Person p2
