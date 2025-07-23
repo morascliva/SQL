@@ -1,3 +1,5 @@
+/* sum to add up different revenue of the same month examples FEb */
+
 select id,
 sum(if(month = "Jan", revenue, null)) as Jan_Revenue,
 sum(if(month = "Feb", revenue, null)) as Feb_Revenue,
