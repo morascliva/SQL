@@ -3,3 +3,12 @@ select distinct author_id as id
 from Views 
 where author_id = viewer_id
 order by author_id asc
+/*author viewed his own work */
+
+
+select distinct author_id as id
+from Views
+group by author_id
+having count(viewer_id)>=1
+order by author_id asc 
+/* whosever work is viewed more than once*/
