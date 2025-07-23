@@ -5,3 +5,18 @@ JOIN Sales s ON p.product_id = s.product_id
 GROUP BY p.product_id, p.product_name
 HAVING MIN(s.sale_date) >= '2019-01-01'
    AND MAX(s.sale_date) <= '2019-03-31';
+
+
+The earliest sale (MIN) must be on or after 2019-01-01.
+
+The latest sale (MAX) must be on or before 2019-03-31.
+
+
+wrongcode 
+SELECT p.product_id, p.product_name 
+FROM Product p 
+JOIN Sales s ON p.product_id = s.product_id
+WHERE s.sale_date BETWEEN '2019-01-01' AND '2019-03-31';
+This query returns products that had at least one sale between '2018-12-31' and '2019-04-01'.
+
+But it does not check whether those same products had other sales outside Q1 2019, which is what the requirement wants to avoid.
