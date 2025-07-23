@@ -1,5 +1,3 @@
-
-
 SELECT a.name, b.bonus
 FROM Employee a
 LEFT JOIN Bonus b
