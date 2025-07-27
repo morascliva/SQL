@@ -9,3 +9,10 @@ UNION
 SELECT product_id, 'store3' AS store, store3 AS price 
 FROM Products 
 WHERE store3 IS NOT NULL
+
+
+Combines all three results into a single result set.
+
+UNION removes duplicates (though in this case, it's unlikely to have exact duplicates).
+
+If you want to keep duplicates, use UNION ALL.
