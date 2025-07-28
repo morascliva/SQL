@@ -17,3 +17,11 @@ Copy
 Edit
 = 17:00 - 09:00
 = 8 hours
+
+❌ SUM(in_time - out_time)
+This does the opposite:
+
+Copy
+Edit
+= 09:00 - 17:00
+= -8 hours (negative)
