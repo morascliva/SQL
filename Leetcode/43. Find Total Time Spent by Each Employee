@@ -10,3 +10,10 @@ GROUP BY
 
 SUM(out_time - in_time) AS total_time
 Calculates the total time worked per employee per day.
+✅ SUM(out_time - in_time)
+This correctly calculates the duration an employee worked:
+
+Copy
+Edit
+= 17:00 - 09:00
+= 8 hours
