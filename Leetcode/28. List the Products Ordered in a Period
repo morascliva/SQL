@@ -14,3 +14,16 @@ GROUP BY
     p.product_id, p.product_name
 HAVING 
     SUM(o.unit) >= 100;
+
+
+
+Unknown column 'o.order_date' in 'having clause'
+is happening because o.order_date is not accessible in the HAVING clause — it should be part of the WHERE clause instead.
+
+
+select P.product_name,sum(o.unit) as unit
+from Products P join Orders o
+on P.product_id = o.product_id 
+where o.order_date >= '2020-02-01' and  o.order_date <'2020-03-01'
+group by P.product_name,P.product_id
+having unit >=100 
