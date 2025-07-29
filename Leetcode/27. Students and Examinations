@@ -13,3 +13,8 @@ LEFT JOIN Examinations E
 GROUP BY S.student_id, S.student_name, SU.subject_name
 ORDER BY S.student_id, S.student_name, SU.subject_name
 ;
+
+
+Part	Purpose
+CROSS JOIN Subjects	Generates all student-subject combinations
+LEFT JOIN Examinations	Brings in exam data if any; keeps rows even if there’s no match
